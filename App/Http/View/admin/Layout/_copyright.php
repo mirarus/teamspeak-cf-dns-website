@@ -1,0 +1,1 @@
+&copy; Copyright <?php getSetting('title', 1); ?>, By Ali Güçlü.

@@ -1,0 +1,9 @@
+/vendor
+/.github
+/.git
+/
+/.idea
+
+.env
+*.log
+composer.lock
