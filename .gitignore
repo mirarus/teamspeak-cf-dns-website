@@ -4,6 +4,8 @@
 /
 /.idea
 
+full-setup.zip
+
 .env
 *.log
 composer.lock
