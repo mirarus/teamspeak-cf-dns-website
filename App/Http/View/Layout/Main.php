@@ -30,12 +30,12 @@
             <div class="nav-active-text-primary" data-nav>
                 <ul class="nav bg">
                     <li class="nav-header hidden-folded">
-                        <span class="text-muted"><?= _('Dashboard'); ?></span>
+                        <span class="text-muted">Kontrol Paneli</span>
                     </li>
                     <li>
                         <a href="<?php url(null, 1); ?>" class="no-ajax">
                             <span class="nav-icon text-secondary"><i data-feather='home'></i></span>
-                            <span class="nav-text"><?= _('Home'); ?></span>
+                            <span class="nav-text">Ana Sayfa</span>
                         </a>
                     </li>
                     <li class="nav-header hidden-folded">
@@ -44,13 +44,13 @@
                     <li>
                         <a href="<?php url("tickets", 1); ?>" class="no-ajax">
                             <span class="nav-icon text-warning"><i data-feather='voicemail'></i></span>
-                            <span class="nav-text"><?= _('Support Tickets'); ?></span>
+                            <span class="nav-text">Destek Talepleri</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?php url("dns", 1); ?>" class="no-ajax">
                             <span class="nav-icon text-primary"><i data-feather='globe'></i></span>
-                            <span class="nav-text"><?= _('Dns Records'); ?></span>
+                            <span class="nav-text">Dns Kayıtları</span>
                         </a>
                     </li>
             </div>
@@ -74,18 +74,8 @@
             <!-- / brand -->
             <ul class="nav navbar-menu order-1 order-lg-2">
                 <!-- User dropdown menu -->
-                <li class="nav-item dropdown">
-                <span href="<?= url(page()); ?>#" data-toggle="dropdown" class="nav-link px-2 pointer">
-                    <i data-feather="globe"></i>
-              </span>
-                    <div class="dropdown-menu dropdown-menu-center w mt-3 animate fadeIn selectLocale">
-						<?php foreach (locales('locales') as $locale) {
-							echo '<a class="no-ajax dropdown-item ' . (($locale == locales('locale')) ? 'bg-dark' : null) . '" href="' . url(page() . '?locale=' . $locale) . '" data-locale="' . $locale . '"><span>' . (class_exists('Locale') ? Locale::getDisplayLanguage($locale, locales('locale')) : $locale) . '</span></a>';
-						} ?>
-                    </div>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php url("logout", 1); ?>"><?= _("Logout"); ?></a>
+                    <a class="nav-link" href="<?php url("logout", 1); ?>">Çıkış Yap</a>
                 </li>
                 <li class="nav-item d-lg-none">
                     <a class="nav-link px-1" data-toggle="modal" data-target="#aside">
@@ -111,8 +101,8 @@
 <script>
     let _url = "<?php url(null, 1); ?>";
     let _page = "<?php url(page(), 1); ?>";
-    let _locale = "<?= strtolower((class_exists('Locale') ? Locale::getPrimaryLanguage(locales('locale')) : (explode('_', locales('locale'))[0]) ?: 'en') ?: 'en'); ?>";
-    let ajaxSetupLoadingText = "<?= _('Please Wait') ?>";
+    let _locale = "tr";
+    let ajaxSetupLoadingText = "Lütfen Bekleyin";
 </script>
 <!-- jQuery -->
 <script src="<?php url('assets/libs/jquery/dist/jquery.min.js', 1); ?>"></script>
@@ -137,7 +127,7 @@
 <!-- site -->
 <script src="<?php url('index.min.js', 1); ?>"></script>
 <script src="<?php url('assets/js/site.min.js', 1); ?>"></script>
-<script src="<?php url('assets/js/pages/dns.js', 1); ?>"></script>
+<script src="<?php url('assets/js/pages/dns.min.js', 1); ?>"></script>
 <script src="<?php url('assets/js/pages/ticket.min.js', 1); ?>"></script>
 <!-- endbuild -->
 </body>

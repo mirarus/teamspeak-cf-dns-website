@@ -28,17 +28,19 @@ function auth_role(): bool
 }
 
 /**
+ * @param null $arg
  * @return bool
  */
-function is_user(): bool
+function is_user($arg = null): bool
 {
-	return auth_role(func_get_arg(0), AuthRole::USER);
+	return auth_role($arg, AuthRole::USER);
 }
 
 /**
+ * @param null $arg
  * @return bool
  */
-function is_admin(): bool
+function is_admin($arg = null): bool
 {
-	return auth_role(func_get_arg(0), AuthRole::ADMIN);
+	return auth_role($arg, AuthRole::ADMIN);
 }

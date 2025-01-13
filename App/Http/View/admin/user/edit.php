@@ -2,12 +2,12 @@
 <div class="page-hero page-container " id="page-hero">
     <div class="padding d-flex">
         <div class="page-title">
-            <h2 class="text-md text-highlight"><?php echo sprintf(_("User #%s Edit"), $args['id'], $args['email']); ?></h2>
+            <h2 class="text-md text-highlight"><?php echo sprintf("Kullanıcı #%s düzenle", $args['id'], $args['email']); ?></h2>
         </div>
         <div class="flex"></div>
         <div>
             <a href="<?php url('users', 1); ?>" class="btn btn-md text-muted">
-                <span class="d-none d-sm-inline mx-1"><?= _('Users') ?></span>
+                <span class="d-none d-sm-inline mx-1">Kullanıcılar</span>
                 <i data-feather="users"></i>
             </a>
         </div>
@@ -26,19 +26,19 @@
                                     <input id="for-email" class="md-input" type="email"
                                            value="<?php echo $args['email']; ?>"
                                            name="email" required>
-                                    <label for="for-email"><?= _('Email') ?></label>
+                                    <label for="for-email">E-Mail</label>
                                 </div>
                                 <div class="md-form-group float-label">
                                     <input id="for-password" class="md-input" type="password" value="" name="password"
                                            required>
-                                    <label for="for-password"><?= _('Password') ?></label>
+                                    <label for="for-password">Şifre</label>
                                 </div>
                                 <div class="md-form-group float-label">
                                     <label class="md-check">
                                         <input type="checkbox"
                                                name="role" <?php echo($args['role'] == 'admin' ? 'checked' : null); ?>>
                                         <i class="red"></i>
-										<?= _('Admin') ?>
+                                        Yönetici
                                     </label>
                                 </div>
                                 <div class="md-form-group float-label">
@@ -46,7 +46,7 @@
                                         <input type="checkbox"
                                                name="status" <?php echo($args['status'] == 1 ? 'checked' : null); ?>>
                                         <i class="blue"></i>
-										<?= _('Status') ?>
+										Durum
                                     </label>
                                 </div>
                                 <input type="hidden" name="id" value="<?php echo $args['id']; ?>">
@@ -54,7 +54,7 @@
                                 <div class="md-form-group text-center">
                                     <button type="submit" class="btn w-sm bg-primary">
 										<?= ajaxLoad(); ?>
-										<?= _('Save') ?>
+                                        Kaydet
                                     </button>
                                 </div>
                             </div>

@@ -17,7 +17,7 @@ class Setting
 	{
 		View::load("setting/site", [
 		  'theme' => 'admin',
-		  'title' => _("Site Settings")
+		  'title' => "Site Ayarları"
 		], true);
 	}
 
@@ -29,7 +29,7 @@ class Setting
 	{
 		View::load("setting/dns", [
 		  'theme' => 'admin',
-		  'title' => _("Dns Settings")
+		  'title' => "Dns Ayarları"
 		], true);
 	}
 
@@ -78,12 +78,12 @@ class Setting
 
 			if ($e_favicon || $e_logo || $e_text_logo || $e_text_logo_status || $e_site_status || $e_title || $e_description || $e_keywords) {
 				$status = true;
-				$result = _('Operation success');
+				$result = "İşlem Başarılı";
 			} else {
-				$result = _('Operation failed');
+				$result = "İşlem başarısız";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 
 		echo Response::json($result, $status);
@@ -109,12 +109,12 @@ class Setting
 
 			if ($e_dns_email || $e_dns_api_key || $e_dns_domains) {
 				$status = true;
-				$result = _('Operation success');
+				$result = "İşlem Başarılı";
 			} else {
-				$result = _('Operation failed');
+				$result = "İşlem başarısız";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}

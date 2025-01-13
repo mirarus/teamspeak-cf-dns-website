@@ -5,8 +5,8 @@
             <div class="d-flex">
                 <i data-feather="info" width="48" height="48"></i>
                 <div class="px-3">
-                    <h5 class="alert-heading"><?= _("Information!"); ?></h5>
-                    <p><?= _("You can view support tickets by clicking on the support tickets listed on the left side."); ?></p>
+                    <h5 class="alert-heading">Bilgilendirme!</h5>
+                    <p>Sol tarafta listelenen destek biletlerine tıklayarak destek biletlerini görüntüleyebilirsiniz.</p>
                 </div>
             </div>
         </div>

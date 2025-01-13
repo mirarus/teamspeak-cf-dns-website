@@ -29,21 +29,20 @@
                 <div class="padding p-md-4">
                     <form role="form" id="signin_form" action="" onsubmit="return false;" novalidate="novalidate">
                         <div class="form-group">
-                            <label><?= _("Email"); ?></label>
-                            <input type="text" name="email" class="form-control" placeholder="<?= _("Email"); ?>">
+                            <label>E-Mail</label>
+                            <input type="text" name="email" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label><?= _("Password"); ?></label>
-                            <input type="password" name="password" class="form-control"
-                                   placeholder="<?= _("Password"); ?>">
+                            <label>Şifre</label>
+                            <input type="password" name="password" class="form-control">
                         </div>
 						<?php echo BMVC\Libs\Csrf::input(page()); ?>
                         <button type="submit" class="btn gd-danger btn-block btn-md mb-4">
 							<?= ajaxLoad() ?>
-							<?= _("Sign in"); ?>
+                            Giriş Yap
                         </button>
-                        <div><?= _("Do not have an account?"); ?>
-                            <a href="<?= url('signup') ?>" class="text-primary"><?= _("Sign up"); ?></a>
+                        <div>Hesabınız yok mu?
+                            <a href="<?= url('signup') ?>" class="text-primary">Kaydol</a>
                         </div>
                     </form>
                 </div>
@@ -54,8 +53,7 @@
 </div>
 <!-- build:js -->
 <script>
-    let _locale = "<?= strtolower((class_exists('Locale') ? Locale::getPrimaryLanguage(locales('locale')) : (explode('_', locales('locale'))[0]) ?: 'en') ?: 'en'); ?>";
-    let ajaxSetupLoadingText = "<?= _('Please Wait') ?>";
+    let ajaxSetupLoadingText = "Lütfen Bekleyin";
 </script>
 <!-- jQuery -->
 <script src="<?php url('assets/libs/jquery/dist/jquery.min.js', 1); ?>"></script>

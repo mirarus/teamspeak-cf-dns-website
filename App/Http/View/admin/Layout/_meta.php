@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= strtolower((class_exists('Locale') ? Locale::getPrimaryLanguage(locales('locale')) : (explode('_', locales('locale'))[0]) ?: 'en') ?: 'en'); ?>">
+<html lang="tr">
 <head>
     <title><?php echo getViewData('title'); ?> | <?php getSetting('title', 1); ?></title>
     <base href="<?php url(null, 1); ?>"/>

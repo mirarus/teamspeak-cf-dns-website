@@ -47,7 +47,7 @@ class Ticket
 	public function index()
 	{
 		View::load("ticket/all", [
-		  'title' => _("Tickets"),
+		  'title' => "Destek Biletleri",
 		  'theme' => selectTheme(),
 		  'data' => [
 			'tickets' => (new ticketModel)->list(),
@@ -81,7 +81,7 @@ class Ticket
 
 		View::load("ticket/view", [
 		  'theme' => selectTheme(),
-		  'title' => sprintf(_("Ticket - %s"), $_get['subject']),
+		  'title' => sprintf("Bilet - %s", $_get['subject']),
 		  'data' => array_merge($_get, [
 			'tickets' => (new ticketModel)->list(),
 			'replies' => (new ticketReplyModel)->list(['ticket' => $_get['id']]),
@@ -114,15 +114,15 @@ class Ticket
 				];
 
 				$lang = [
-				  'required' => _('Fill in the required fields'),
-				  'messageSend' => _('Message sent'),
-				  'awaitingAnswer' => _('Awaiting Answer'),
-				  'close' => sprintf(_("#%s Close ticket?"), ($_get['id'] . ':' . $_get['subject'])),
-				  'closed' => _('Ticket closed'),
-				  'closeCancel' => _('Ticket closing process canceled'),
-				  'delete' => sprintf(_("#%s Delete ticket ?"), ($_get['id'] . ':' . $_get['subject'])),
-				  'deleted' => _('Ticket deleted'),
-				  'deleteCancel' => _('Ticket deleting process canceled'),
+				  'required' => "Gerekli alanları doldurun",
+				  'messageSend' => "Mesaj gönder",
+				  'awaitingAnswer' => "Cevap Bekleniyor",
+				  'close' => sprintf("#%s Bilet kapatılsın mı?", ($_get['id'] . ':' . $_get['subject'])),
+				  'closed' => "Bilet kapandı",
+				  'closeCancel' => "Bilet kapatma işlemi iptal edildi",
+				  'delete' => sprintf("#%s Bilet silinsin mi?", ($_get['id'] . ':' . $_get['subject'])),
+				  'deleted' => "Bilet silindi",
+				  'deleteCancel' => "Bilet silme işlemi iptal edildi",
 				];
 			}
 		}
@@ -171,23 +171,23 @@ class Ticket
 							$status = true;
 							$result = $url;
 						} else {
-							$result = _('Operation failed');
+							$result = "İşlem başarısız";
 						}
 					} else {
-						$result = _('Operation failed');
+						$result = "İşlem başarısız";
 					}
 				} else {
-					$result = _('Operation failed');
+					$result = "İşlem başarısız";
 				}
 			} else {
-				$result = _("Ticket already exists");
+				$result = "Bilet zaten var";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 
 		echo Response::_json(['status' => $status, 'message' => $result, 'lang' => [
-		  "created" => _('Ticket created')
+		  "created" => "Bilet oluşturuldu"
 		]]);
 	}
 
@@ -222,13 +222,13 @@ class Ticket
 					$status = true;
 					$result = [$msg, date("d.m.Y - H:i", $time)];
 				} else {
-					$result = _('Message could not be sent');
+					$result = "Mesaj gönderilemedi";
 				}
 			} else {
-				$result = _("Ticket not found");
+				$result = "Bilet bulunamadı";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}
@@ -250,15 +250,15 @@ class Ticket
 				$_edit = (new ticketModel)->edit('id', $_get['id'], ['status' => 1]);
 				if ($_edit != null) {
 					$status = true;
-					$result = _('Operation success');
+					$result = "İşlem Başarılı";
 				} else {
-					$result = _('Operation failed');
+					$result = "İşlem başarısız";
 				}
 			} else {
-				$result = _("Ticket not found");
+				$result = "Bilet bulunamadı";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}
@@ -285,18 +285,18 @@ class Ticket
 					$_delete_replies = (new ticketReplyModel)->delete('ticket', $_get['id']);
 					if ($_delete_replies != null) {
 						$status = true;
-						$result = _('Operation success');
+						$result = "İşlem Başarılı";
 					} else {
-						$result = _('Operation failed');
+						$result = "İşlem başarısız";
 					}
 				} else {
-					$result = _('Operation failed');
+					$result = "İşlem başarısız";
 				}
 			} else {
-				$result = _("Ticket not found");
+				$result = "Bilet bulunamadı";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}

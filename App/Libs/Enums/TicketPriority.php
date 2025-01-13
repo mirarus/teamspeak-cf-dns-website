@@ -4,7 +4,7 @@ namespace App\Libs\Enums;
 
 class TicketPriority
 {
-	const LOW = ["gd-info", "Low"];
-	const MIDDLE = ["gd-warning", "Middle"];
-	const HIGH = ["gd-danger", "High"];
+	const LOW = ["gd-info", "Düşük"];
+	const MIDDLE = ["gd-warning", "Orta"];
+	const HIGH = ["gd-danger", "Yüksek"];
 }

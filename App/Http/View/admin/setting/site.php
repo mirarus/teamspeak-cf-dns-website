@@ -1,7 +1,7 @@
 <div class="page-hero page-container " id="page-hero">
     <div class="padding d-flex">
         <div class="page-title">
-            <h2 class="text-md text-highlight"><?= _('Site Settings'); ?></h2>
+            <h2 class="text-md text-highlight">Site Ayarları</h2>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
                                             <input type="file" class="custom-file-input" id="favicon" name="favicon"
                                                    accept="image/*">
                                             <label class="custom-file-label mb-0"
-                                                   for="favicon"><?= _('Favicon'); ?></label>
+                                                   for="favicon">Simge</label>
                                         </div>
                                     </div>
                                 </div>
@@ -35,7 +35,7 @@
                                         <div class="ml-3 custom-file md-input setting_site_logo">
                                             <input type="file" class="custom-file-input" id="logo" name="logo"
                                                    accept="image/*">
-                                            <label class="custom-file-label mb-0" for="logo"><?= _('Logo'); ?></label>
+                                            <label class="custom-file-label mb-0" for="logo">Logo</label>
                                         </div>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
                                     <div class="input-group md-form-group">
                                         <input class="md-input form-control" type="text"
                                                value="<?php getSetting('text_logo', 1); ?>"
-                                               name="text_logo" placeholder="<?= _('Text Logo'); ?>" required>
+                                               name="text_logo" placeholder="Yazılı Logo" required>
                                         <div class="input-group-append">
                                             <div class="border-left-0 border-right-0 border-top-0 btn btn-icon input-group-text rounded-0">
                                                 <input type="checkbox" name="text_logo_status"
@@ -57,15 +57,15 @@
                                 <div class="col-sm-4">
                                     <div class="md-form-group float-label">
                                         <select id="for-site_status" class="md-input form-control" name="site_status">
-                                            <option disabled selected><?= _('Choose Status'); ?></option>
+                                            <option disabled selected>Durum Seçin</option>
                                             <option value="1" <?php echo(getSetting('site_status') == 1 ? 'selected' : null); ?>>
-                                                <?= _('Open'); ?>
+                                                Açık
                                             </option>
                                             <option value="0" <?php echo(getSetting('site_status') == 0 ? 'selected' : null); ?>>
-	                                            <?= _('Close'); ?>
+                                                Kapalı
                                             </option>
                                         </select>
-                                        <label for="for-site_status"><?= _('Site Status'); ?></label>
+                                        <label for="for-site_status">Site Durumu</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
@@ -74,7 +74,7 @@
                                                value="<?php getSetting('title', 1); ?>"
                                                name="title"
                                                required>
-                                        <label for="for-title"><?= _('Title'); ?></label>
+                                        <label for="for-title">Başlık</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
@@ -83,7 +83,7 @@
                                                value="<?php getSetting('description', 1); ?>"
                                                name="description"
                                                required>
-                                        <label for="for-description"><?= _('Description'); ?></label>
+                                        <label for="for-description">Açıklama</label>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                                value="<?php getSetting('keywords', 1); ?>"
                                                name="keywords"
                                                required>
-                                        <label for="for-keywords"><?= _('Keywords'); ?></label>
+                                        <label for="for-keywords">Anahtar Kelimeler</label>
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@
                             <div class="justify-content-center row row-sm">
                                 <button type="submit" class="btn w-sm bg-primary">
 									<?= ajaxLoad(); ?>
-									<?= _('Save'); ?>
+									Kaydet
                                 </button>
                             </div>
                         </form>

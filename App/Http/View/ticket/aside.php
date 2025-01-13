@@ -4,7 +4,7 @@
         <div class="navbar">
             <div class="input-group flex bg-light rounded">
                 <input type="text" class="form-control no-bg no-border no-shadow search"
-                       placeholder="<?= _("Search..."); ?>"
+                       placeholder="Ara..."
                        required="">
                 <span class="input-group-append">
           <button class="btn no-bg no-shadow" type="button"><i data-feather="search" class="text-fade"></i></button>
@@ -12,8 +12,7 @@
             </div>
         </div>
         <div class="pb-2 px-3">
-            <button class="btn btn-sm btn-block box-shadows gd-danger text-white" data-toggle="modal"
-                    data-target="#ticket_new_modal"><?= _("Create a new support ticket"); ?>
+            <button class="btn btn-sm btn-block box-shadows gd-danger text-white" data-toggle="modal" data-target="#ticket_new_modal">Yeni bir destek bileti oluşturun
             </button>
         </div>
         <div class="scrollable hover">
@@ -33,14 +32,14 @@
                                 <div class="item-date text-muted text-sm h-1x"><?= date("d.m.Y - H:i", $d['time']); ?></div>
                             </div>
                             <div>
-                                <span class="badge item-status <?= $args['state']['status'][$d['status']][0]; ?>"><?= _($args['state']['status'][$d['status']][1]); ?></span>
+                                <span class="badge item-status <?= $args['state']['status'][$d['status']][0]; ?>"><?= $args['state']['status'][$d['status']][1]; ?></span>
                             </div>
                         </div>
 					<?php }
 				} ?>
             </div>
             <div class="no-result hide">
-                <div class="p-4 text-center"><?= _("No Results"); ?></div>
+                <div class="p-4 text-center">Sonuç Yok</div>
             </div>
         </div>
     </div>
@@ -50,7 +49,7 @@
     <div class="modal-dialog">
         <div class="modal-content bg-body">
             <div class="modal-header border-bottom">
-                <h5 class="modal-title text-md"><?= _("Create a new support ticket"); ?></h5>
+                <h5 class="modal-title text-md">Yeni bir destek bileti oluşturun</h5>
                 <button class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body padding">
@@ -58,26 +57,26 @@
                     <div class="flex-column row row-sm">
                         <div class="md-form-group float-label">
                             <input class="md-input" type="text" name="subject" required>
-                            <label><?= _("Subject"); ?></label>
+                            <label>Konu</label>
                         </div>
                         <div class="md-form-group float-label">
                             <select class="md-input form-control" name="priority" required>
-                                <option disabled selected><?= _("Choose Priority"); ?></option>
+                                <option disabled selected>Önceliği Seçin</option>
 								<?php foreach ($args['state']['priority'] as $key => $val) {
 									echo '<option value="' . $key . '" ' . ($key == 1 ? 'selected' : null) . '>' . _($val[1]) . '</option>';
 								} ?>
                             </select>
-                            <label><?= _("Priority"); ?></label>
+                            <label>Öncelik</label>
                         </div>
                         <div class="md-form-group float-label">
                             <input class="md-input" type="text" name="message" required>
-                            <label><?= _("Message"); ?></label>
+                            <label>Mesaj</label>
                         </div>
 						<?php echo BMVC\Libs\Csrf::input("tickets/add"); ?>
                         <div class="md-form-group text-center pb-0">
                             <button type="submit" class="btn btn-sm gd-danger w-sm">
 								<?= ajaxLoad() ?>
-								<?= _("Create"); ?>
+								Oluştur
                             </button>
                         </div>
                     </div>

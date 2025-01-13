@@ -19,7 +19,7 @@ class User
 	{
 		View::load("user/index", [
 		  'theme' => 'admin',
-		  'title' => _("Users"),
+		  'title' => "Kullanıcılar",
 		  'data' => (new UserModel)->all()
 		], true);
 	}
@@ -32,7 +32,7 @@ class User
 	{
 		View::load("user/add", [
 		  'theme' => 'admin',
-		  'title' => _("User Create")
+		  'title' => "Kullanıcı oluştur"
 		], true);
 	}
 
@@ -48,7 +48,7 @@ class User
 
 		View::load("user/edit", [
 		  'theme' => 'admin',
-		  'title' => sprintf(_("User #%s Edit"), $_get['id']),
+		  'title' => sprintf("Kullanıcı #%s düzenle", $_get['id']),
 		  'data' => $_get
 		], true);
 	}
@@ -80,18 +80,18 @@ class User
 
 					if ($_add != null) {
 						$status = true;
-						$result = _("Operation success");
+						$result = "İşlem Başarılı";
 					} else {
-						$result = _('Operation failed');
+						$result = "İşlem başarısız";
 					}
 				} else {
-					$result = _('Email address is already in use');
+					$result = "Mail adresi zaten kullanılıyor";
 				}
 			} else {
-				$result = _('Email address is invalid');
+				$result = "Mail adresi geçersiz";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}
@@ -122,12 +122,12 @@ class User
 
 			if ($_edit) {
 				$status = true;
-				$result = _('Operation success');
+				$result = "İşlem Başarılı";
 			} else {
-				$result = _('Operation failed');
+				$result = "İşlem başarısız";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}
@@ -151,8 +151,8 @@ class User
 				$result = $_get['id'];
 
 				$lang = [
-				  'cancel' => _('User Deletion has been cancelled'),
-				  'confirm' => sprintf(_("Delete User account %s ?"), ($_get['id'] . ':' . $_get['email']))
+				  'cancel' => "Kullanıcı silme işlemi iptal edildi",
+				  'confirm' => sprintf("Kullanıcı hesabı %s silinsin mi?", ($_get['id'] . ':' . $_get['email']))
 				];
 			}
 		}
@@ -185,12 +185,12 @@ class User
 
 			if ((new UserModel)->delete('id', $id)) {
 				$status = true;
-				$result = _('Operation success');
+				$result = "İşlem Başarılı";
 			} else {
-				$result = _('Operation failed');
+				$result = "İşlem başarısız";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}

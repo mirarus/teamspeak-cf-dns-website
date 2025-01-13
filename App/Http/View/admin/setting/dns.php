@@ -1,7 +1,7 @@
 <div class="page-hero page-container " id="page-hero">
     <div class="padding d-flex">
         <div class="page-title">
-            <h2 class="text-md text-highlight"><?= _('Dns Settings'); ?></h2>
+            <h2 class="text-md text-highlight">Dns Ayarları</h2>
         </div>
     </div>
 </div>
@@ -19,7 +19,7 @@
                                         <input id="for-dns_email" class="md-input" type="text"
                                                value="<?php getSetting('dns_email', 1); ?>"
                                                name="dns_email" required>
-                                        <label for="for-dns_email"><?= _('Cloudflare Email'); ?></label>
+                                        <label for="for-dns_email">Cloudflare E-Mail</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -27,7 +27,7 @@
                                         <input id="for-dns_api_key" class="md-input" type="text"
                                                value="<?php getSetting('dns_api_key', 1); ?>"
                                                name="dns_api_key" required>
-                                        <label for="for-dns_api_key"><?= _('Cloudflare Api Key'); ?></label>
+                                        <label for="for-dns_api_key">Cloudflare Api Anahtarı</label>
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@
                                         <input id="for-dns_domains" class="md-input" type="text"
                                                value="<?php getSetting('dns_domains', 1); ?>"
                                                name="dns_domains" required>
-                                        <label for="for-dns_domains"><?= _('Domains'); ?> <?= _('(Use the special character | after each domain name. eg: aaa.com|bbb.com)'); ?></label>
+                                        <label for="for-dns_domains">Alan Adları (Her alan adından sonra | özel karakterini kullanın. Örneğin: aaa.com|bbb.com)</label>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                             <div class="justify-content-center row row-sm">
                                 <button type="submit" class="btn w-sm bg-primary">
 	                                <?= ajaxLoad(); ?>
-                                    <?= _('Save'); ?>
+                                    Kaydet
                                 </button>
                             </div>
                         </form>

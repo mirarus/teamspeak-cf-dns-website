@@ -4,7 +4,7 @@
         <div class="navbar">
             <div class="input-group flex bg-light rounded">
                 <input type="text" class="form-control no-bg no-border no-shadow search"
-                       placeholder="<?= _("Search..."); ?>" required/>
+                       placeholder="Ara..." required/>
                 <span class="input-group-append">
                     <button class="btn no-bg no-shadow" type="button">
                         <i data-feather="search" class="text-fade"></i>
@@ -31,7 +31,7 @@
                                     <div class="item-date text-muted text-sm h-1x"><?= date("d.m.Y - H:i", $d['time']); ?></div>
                                 </div>
                                 <div>
-                                    <span class="badge item-status <?= $args['state']['status'][$d['status']][0]; ?>"><?= _($args['state']['status'][$d['status']][1]); ?></span>
+                                    <span class="badge item-status <?= $args['state']['status'][$d['status']][0]; ?>"><?= $args['state']['status'][$d['status']][1]; ?></span>
                                 </div>
                             </div>
 						<?php }
@@ -39,7 +39,7 @@
 				} ?>
             </div>
             <div class="no-result hide">
-                <div class="p-4 text-center"><?= _("No Results"); ?></div>
+                <div class="p-4 text-center">Sonuç Yok</div>
             </div>
         </div>
     </div>

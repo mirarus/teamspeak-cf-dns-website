@@ -19,7 +19,7 @@ class Dns
 	{
 		View::load("dns/index", [
 		  'theme' => selectTheme(),
-		  'title' => _("Dns Records"),
+		  'title' => "Dns Kayıtları",
 		  'data' => (new DnsModel)->list()
 		], true);
 	}
@@ -32,7 +32,8 @@ class Dns
 	{
 		View::load("dns/add", [
 		  'theme' => selectTheme(),
-		  'title' => _("Dns Create")
+		  'title' => "Dns Oluştur",
+		  'users' => (new UserModel)->all()
 		], true);
 	}
 
@@ -48,7 +49,7 @@ class Dns
 
 		View::load("dns/edit", [
 		  'theme' => selectTheme(),
-		  'title' => sprintf(_("Dns #%s Edit"), $_get['id']),
+		  'title' => sprintf("Dns #%s düzenle", $_get['id']),
 		  'data' => $_get
 		], true);
 	}
@@ -89,21 +90,21 @@ class Dns
 						]);
 						if ($_add != null) {
 							$status = true;
-							$result = _("Operation success");
+							$result = "İşlem Başarılı";
 						} else {
-							$result = _('Operation failed');
+							$result = "İşlem başarısız";
 						}
 					} else {
-						$result = _('Operation failed');
+						$result = "İşlem başarısız";
 					}
 				} else {
-					$result = _('Local IP addresses cannot be used');
+					$result = "Yerel IP adresleri kullanılamaz";
 				}
 			} else {
-				$result = _("User not found");
+				$result = "Üye bulunamadı";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}
@@ -145,27 +146,27 @@ class Dns
 								]);
 								if ($_edit) {
 									$status = true;
-									$result = _('Operation success');
+									$result = "İşlem Başarılı";
 								} else {
-									$result = _('Operation failed');
+									$result = "İşlem başarısız";
 								}
 							} else {
-								$result = _('Operation failed');
+								$result = "İşlem başarısız";
 							}
 						} else {
-							$result = _('Local IP addresses cannot be used');
+							$result = "Yerel IP adresleri kullanılamaz";
 						}
 					} else {
-						$result = _('No changes have been made');
+						$result = "Hiçbir değişiklik yapılmadı";
 					}
 				} else {
-					$result = _('Operation failed');
+					$result = "İşlem başarısız";
 				}
 			} else {
-				$result = _('Operation failed');
+				$result = "İşlem başarısız";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}
@@ -173,8 +174,7 @@ class Dns
 	/**
 	 * @return void
 	 */
-	public
-	function _post_get(): void
+	public function _post_get(): void
 	{
 		$status = false;
 		$result = null;
@@ -189,8 +189,8 @@ class Dns
 				$result = $_get['id'];
 
 				$lang = [
-				  'cancel' => _('Dns Deletion has been cancelled'),
-				  'confirm' => sprintf(_("Delete Dns %s ?"), ($_get['id'] . ':' . $_get['dns']))
+				  'cancel' => "Dns silme işlemi iptal edildi",
+				  'confirm' => sprintf("Dns %s silinsin mi?", ($_get['id'] . ':' . $_get['dns']))
 				];
 			}
 		}
@@ -200,8 +200,7 @@ class Dns
 	/**
 	 * @return void
 	 */
-	public
-	function _post_delete(): void
+	public function _post_delete(): void
 	{
 		$status = false;
 
@@ -221,21 +220,21 @@ class Dns
 
 						if ((new DnsModel)->delete('id', $id)) {
 							$status = true;
-							$result = _('Operation success');
+							$result = "İşlem Başarılı";
 						} else {
-							$result = _('Operation failed');
+							$result = "İşlem başarısız";
 						}
 					} else {
-						$result = _('Operation failed');
+						$result = "İşlem başarısız";
 					}
 				} else {
-					$result = _('Operation failed');
+					$result = "İşlem başarısız";
 				}
 			} else {
-				$result = _('Operation failed');
+				$result = "İşlem başarısız";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 		echo Response::json($result, $status);
 	}

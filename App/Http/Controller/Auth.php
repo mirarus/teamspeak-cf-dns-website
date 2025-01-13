@@ -15,7 +15,7 @@ class Auth
 	{
 		Csrf::remove();
 		View::load("auth/signin", [
-		  'title' => _("Sign in")
+		  'title' => "Giriş Yap"
 		]);
 	}
 
@@ -26,7 +26,7 @@ class Auth
 	{
 		Csrf::remove();
 		View::load("auth/signup", [
-		  'title' => _("Sign up")
+		  'title' => "Kaydol"
 		]);
 	}
 
@@ -53,21 +53,21 @@ class Auth
 
 						if (Session::get(md5('user_id'))) {
 							$status = true;
-							$result = _("Operation success");
+							$result = "İşlem Başarılı";
 						} else {
-							$result = _('Operation failed');
+							$result = "İşlem başarısız";
 						}
 					} else {
-						$result = _("Invalid password");
+						$result = "Bu bilgilere sahip bir hesap bulunamadı";
 					}
 				} else {
-					$result = _("An account with this informations was not found");
+					$result = "Bu bilgilere sahip bir hesap bulunamadı";
 				}
 			} else {
-				$result = _('Email address is invalid');
+				$result = "Mail adresi geçersiz";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 
 		echo Response::json($result, $status);
@@ -104,24 +104,24 @@ class Auth
 
 							if (Session::get(md5('user_id'))) {
 								$status = true;
-								$result = _("Operation success");
+								$result = "İşlem Başarılı";
 							} else {
-								$result = _('Operation failed');
+								$result = "İşlem başarısız";
 							}
 						} else {
-							$result = _('Operation failed');
+							$result = "İşlem başarısız";
 						}
 					} else {
-						$result = _('Operation failed');
+						$result = "İşlem başarısız";
 					}
 				} else {
-					$result = _('Email address is already in use');
+					$result = "Mail adresi zaten kullanılıyor";
 				}
 			} else {
-				$result = _('Email address is invalid');
+				$result = "Mail adresi geçersiz";
 			}
 		} else {
-			$result = _("Fill in the required fields");
+			$result = "Gerekli alanları doldurun";
 		}
 
 		echo Response::json($result, $status);

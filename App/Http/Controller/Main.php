@@ -17,7 +17,7 @@ class Main
 	{
 		View::load("index", [
 		  'theme' => selectTheme(),
-		  'title' => _("Home"),
+		  'title' => "Ana sayfa",
 		  'count' => [
 			'user' => (is_admin() ? (new User)->count() : ""),
 			'ticket' => (is_admin() ? (new Ticket)->count() : (new Ticket)->count('user', auth_get('id'))),
@@ -34,18 +34,18 @@ class Main
 	{
 		Response::setStatusCode(500);
 		if (!Request::getReferer() || !Session::get(500)) {
-			View::load("errors/500", ['title' => _("Error 500")]);
+			View::load("errors/500", ['title' => "Sistem Hatası"]);
 		} else {
 			if (Session::get(500) == "post") {
-				$res = _("Post Required");
+				$res = "Post Gerekli";
 			} elseif (Session::get(500) == "ajax") {
-				$res = _("Ajax Required");
+				$res = "Ajax Gerekli";
 			} elseif (Session::get(500) == "form-data") {
-				$res = _("Form Data Required");
+				$res = "Form Data Gerekli";
 			} elseif (Session::get(500) == "csrf") {
-				$res = _("Csrf Validation Required");
+				$res = "Csrf Doğrulaması Gerekli";
 			} else {
-				$res = _("System Error");
+				$res = "Sistem Hatası";
 			}
 			Session::delete('500');
 
@@ -61,7 +61,7 @@ class Main
 	{
 		Response::setStatusCode(404);
 		if (Request::isGet()) {
-			View::load("errors/404", ['title' => _("Error 404")]);
+			View::load("errors/404", ['title' => "Sayfa Bulunamadı"]);
 		} else {
 			$res = (Response::getStatusCode() . ' ' . Response::getStatusMessage());
 			echo Response::_json((PAGE ? ['message' => $res, 'page' => PAGE] : ['message' => $res]), 404);
@@ -75,9 +75,9 @@ class Main
 	public function errorMaintenance()
 	{
 		if (Request::isGet()) {
-			View::load("errors/maintenance", ['title' => _("Maintenance")], true);
+			View::load("errors/maintenance", ['title' => "Bakım"], true);
 		} else {
-			echo Response::_json((PAGE ? ['message' => _("Maintenance"), 'page' => PAGE] : ['message' => _("Maintenance")]));
+			echo Response::_json((PAGE ? ['message' => "Bakım", 'page' => PAGE] : ['message' => "Bakım"]));
 		}
 	}
 }
