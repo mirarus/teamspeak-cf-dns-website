@@ -1,5 +1,12 @@
 # TEAMSPEAK CLOUDFLARE DNS WEBSITE
 
+    Demo ->
+
+        Url: https://mirarus.com.tr
+        Mail: admin@site.com
+        Şifre: 12345
+.
+
     -> Kurulum
         
 
