@@ -11,7 +11,7 @@
 	],
 	"require": {
 		"php": ">=7.3.0",
-		"mirarus/bmvc-core": "1.99.1",
+		"mirarus/bmvc-core": "2.0.0",
 		"mirarus/bmvc-libs": "0.90.7",
 		"mirarus/teamspeak-cf-dns": "^1.0.2",
 		"ext-intl": "*",
