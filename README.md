@@ -20,6 +20,8 @@
 
 
         5 -> .env yapılandırmasını yapalım
+
+            ENVIRONMENT=development veya production  / development: hata ayıklama
                 
             dbname=XXXXX kısmına veritabanı adımını girelim
             DB_USER ve DB_PASS kısmına ise veritabanı kıllanıcı bilgilerini girelim
