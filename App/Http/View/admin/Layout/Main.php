@@ -72,7 +72,7 @@
                     <li>
                         <a href="<?php url("dns", 1); ?>" class="no-ajax">
                             <span class="nav-icon text-primary"><i data-feather='globe'></i></span>
-                            <span class="nav-text">Dnd Kayıtları</span>
+                            <span class="nav-text">Dns Kayıtları</span>
                         </a>
                     </li>
             </div>
