@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<?php require dirname(__DIR__) . '/Layout/_meta.php'; ?>
-    <!-- style -->
-    <!-- build:css -->
-    <link rel="stylesheet" href="<?php url('assets/css/bootstrap.min.css', 1); ?>" type="text/css"/>
-    <link rel="stylesheet" href="<?php url('assets/css/theme.min.css', 1); ?>" type="text/css"/>
-    <link rel="stylesheet" href="<?php url('assets/libs/toastify/toastify.min.css', 1); ?>" type="text/css"/>
-    <!-- endbuild -->
+<?php require dirname(__DIR__) . '/Layout/_meta.php'; ?>
+<!-- style -->
+<!-- build:css -->
+<link rel="stylesheet" href="<?php url('assets/css/bootstrap.min.css', 1); ?>" type="text/css"/>
+<link rel="stylesheet" href="<?php url('assets/css/theme.min.css', 1); ?>" type="text/css"/>
+<link rel="stylesheet" href="<?php url('assets/libs/toastify/toastify.min.css', 1); ?>" type="text/css"/>
+<!-- endbuild -->
 </head>
 <body class="layout-row bg-dark">
 <div class="align-items-center d-flex flex justify-content-center">
@@ -15,12 +12,12 @@
         <div class="p-4 d-flex flex-column h-100">
             <!-- brand -->
             <a href="<?php url(null, 1); ?>" class="navbar-brand align-self-center">
-		        <?php if (getSetting('text_logo_status')) { ?>
+				<?php if (getSetting('text_logo_status')) { ?>
                     <i data-feather='globe' width="32" height="32"></i>
                     <span class="hidden-folded d-inline l-s-n-1x"><?php getSetting('text_logo', 1); ?></span>
-		        <?php } else { ?>
+				<?php } else { ?>
                     <img src="<?php url(getSetting('logo'), 1); ?>" height="32" alt="logo">
-		        <?php } ?>
+				<?php } ?>
             </a>
             <!-- / brand -->
         </div>

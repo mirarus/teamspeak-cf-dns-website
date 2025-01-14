@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<?php require dirname(__DIR__) . '/Layout/_meta.php'; ?>
-    <!-- style -->
-    <!-- build:css -->
-    <link rel="stylesheet" href="<?php url('assets/css/bootstrap.min.css', 1); ?>" type="text/css"/>
-    <link rel="stylesheet" href="<?php url('assets/css/theme.min.css', 1); ?>" type="text/css"/>
-    <link rel="stylesheet" href="<?php url('assets/libs/toastify/toastify.min.css', 1); ?>" type="text/css"/>
-    <!-- endbuild -->
+<?php require dirname(__DIR__) . '/Layout/_meta.php'; ?>
+<!-- style -->
+<!-- build:css -->
+<link rel="stylesheet" href="<?php url('assets/css/bootstrap.min.css', 1); ?>" type="text/css"/>
+<link rel="stylesheet" href="<?php url('assets/css/theme.min.css', 1); ?>" type="text/css"/>
+<link rel="stylesheet" href="<?php url('assets/libs/toastify/toastify.min.css', 1); ?>" type="text/css"/>
+<!-- endbuild -->
 </head>
 <body class="layout-row bg-dark">
 <div class="align-items-center d-flex flex justify-content-center">
