@@ -9,7 +9,7 @@
 
     Composer aracını kullanmak istemiyor iseniz bu arşivi host içerisine çıkartın ve kurulum adımı 3'e atlayınız.
 
-        https://github.com/mirarus/teamspeak-cf-dns-website/releases/download/0.1/full-setup.zip
+        https://github.com/mirarus/teamspeak-cf-dns-website/releases/download/0.0/full-setup.zip
 .
 
     -> Kurulum
