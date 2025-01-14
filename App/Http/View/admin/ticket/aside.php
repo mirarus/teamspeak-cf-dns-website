@@ -36,7 +36,9 @@
                             </div>
 						<?php }
 					}
-				} ?>
+				} else { ?>
+                    <div class="p-4 text-center"><i data-feather="refresh-ccw"></i></div>
+				<?php } ?>
             </div>
             <div class="no-result hide">
                 <div class="p-4 text-center">Sonuç Yok</div>
