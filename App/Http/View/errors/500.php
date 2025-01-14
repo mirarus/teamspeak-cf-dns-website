@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php require dirname(__DIR__) . '/Layout/_meta.php'; ?>
-  <!-- style -->
-  <!-- build:css -->
-  <link rel="stylesheet" href="<?php url('assets/css/bootstrap.min.css', 1); ?>" type="text/css"/>
-  <link rel="stylesheet" href="<?php url('assets/css/theme.min.css', 1); ?>" type="text/css"/>
-  <!-- endbuild -->
+	<?php require dirname(__DIR__) . '/Layout/_meta.php'; ?>
+    <!-- style -->
+    <!-- build:css -->
+    <link rel="stylesheet" href="<?php url('assets/css/bootstrap.min.css', 1); ?>" type="text/css"/>
+    <link rel="stylesheet" href="<?php url('assets/css/theme.min.css', 1); ?>" type="text/css"/>
+    <!-- endbuild -->
 </head>
 <body class="layout-row bg-dark">
 <div class="d-flex flex align-items-center h-v">
-  <div class="text-center p-5 w-100">
-    <h1 class="display-5 my-5 text-theme">Don't worry, we will fix it soon.</h1>
-    <p>Go back to <a href="<?php url(null, 1); ?>" class="b-b b-white">home</a></p>
-    <p class="my-5 text-muted h4">
-      -- 500 --
-    </p>
-  </div>
+    <div class="text-center p-5 w-100">
+        <h1 class="display-5 my-5 text-theme">Endişelenmeyin, en kısa sürede düzelteceğiz.</h1>
+        <p><a href="<?php url(null, 1); ?>" class="b-b b-white">Ana sayfa'ya</a> geri dön</p>
+        <p class="my-5 text-muted h4">
+            -- 500 --
+        </p>
+    </div>
 </div>
 <!-- build:js -->
 <!-- jQuery -->

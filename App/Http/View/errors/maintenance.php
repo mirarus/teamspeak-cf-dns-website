@@ -5,7 +5,7 @@
                 <i data-feather="code" width="48" height="48"></i>
                 <div class="px-3">
                     <h5 class="alert-heading">Bakım</h5>
-                    <p>Endişelenmeyin, en kısa sürede düzelteceğiz.</p>
+                    <p>Endişelenmeyin, en kısa sürede geri geleceğiz.</p>
                 </div>
             </div>
         </div>

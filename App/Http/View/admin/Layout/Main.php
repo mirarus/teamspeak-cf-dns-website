@@ -87,17 +87,19 @@
             <!-- brand -->
             <a href="<?php url(null, 1); ?>" class="navbar-brand d-lg-none">
 				<?php if (getSetting('text_logo_status')) { ?>
-                    <i data-feather='globe' width="32" height="32"></i>
-                    <span class="hidden-folded d-inline l-s-n-1x d-lg-none"><?php getSetting('text_logo', 1); ?></span>
+                    <i data-feather='globe' width="24" height="24"></i>
+                    <span class="hidden-folded d-inline l-s-n-1x d-lg-none text"><?php getSetting('text_logo', 1); ?></span>
 				<?php } else { ?>
-                    <img src="<?php url(getSetting('logo'), 1); ?>" class="d-lg-none" height="32" alt="logo">
+                    <img src="<?php url(getSetting('logo'), 1); ?>" class="d-lg-none" height="24" alt="logo">
 				<?php } ?>
             </a>
             <!-- / brand -->
             <ul class="nav navbar-menu order-1 order-lg-2">
                 <!-- User dropdown menu -->
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php url("logout", 1); ?>">Çıkış Yap</a>
+                    <a class="nav-link" href="<?php url("logout", 1); ?>">
+                        <i data-feather='log-out' width="16" height="16"></i>
+                    </a>
                 </li>
                 <li class="nav-item d-lg-none">
                     <a class="nav-link px-1" data-toggle="modal" data-target="#aside">

@@ -20,7 +20,7 @@
                 <tr>
                     <th class="text-muted w w-12">#</th>
                     <th class="text-muted w">E-Mail</th>
-                    <th class="text-muted w">Dns Sayısı</th>
+                    <th class="d-none d-xl-table-cell text-muted w">Dns Sayısı</th>
                     <th class="text-muted w">Rol</th>
                     <th class="d-none d-xl-table-cell text-muted w">Durum</th>
                     <th class="d-none d-xl-table-cell text-muted w">Tarih</th>
@@ -33,7 +33,7 @@
 					echo '<tr class="v-middle table-tr" data-id="' . $d['id'] . '">
                                 <td>' . $d['id'] . '</td>
                                 <td>' . $d['email'] . '</td>
-                                <td>' . (new App\Http\Model\Dns)->count('user', $d['id']) . '</td>
+                                <td class="d-none d-xl-table-cell">' . (new App\Http\Model\Dns)->count('user', $d['id']) . '</td>
                                 <td>' . ($d['role'] == 'user' ? "Kullanıcı" : "Yönetici") . '</td>
                                 <td class="d-none d-xl-table-cell">' . (($d['status'] == 1) ? "Aktif" : "Pasif") . '</td>
                                 <td class="d-none d-xl-table-cell">' . date("d.m.Y - H:i", $d['time']) . '</td>
