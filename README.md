@@ -43,6 +43,6 @@
             DB_PASS=root
 
 
-Tanımlı yonetici hesabı bilgileri;
-    Mail: admin@site.com
-    Şifre: 12345
+    Tanımlı yonetici hesabı bilgileri;
+         Mail: admin@site.com
+         Şifre: 12345
