@@ -41,3 +41,8 @@
             DB_DSN=mysql:host=localhost;dbname=XXXXX;charset=utf8
             DB_USER=root
             DB_PASS=root
+
+
+Tanımlı yonetici hesabı bilgileri;
+    Mail: admin@site.com
+    Şifre: 12345
