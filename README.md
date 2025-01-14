@@ -42,6 +42,7 @@
             DB_USER=root
             DB_PASS=root
 
+.
 
     Tanımlı yonetici hesabı bilgileri;
          Mail: admin@site.com
